@@ -8,6 +8,7 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/stylesheet.css">
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/mouseparallax.css" rel="stylesheet" type="text/css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,68 +24,60 @@
 <script src="js/jquery-1.11.3.min.js"></script> 
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/bootstrap.js"></script>
-<style>
-body, html {
-height: 100%;
-}
-.mouse-bg {
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
-position: fixed;
-}
-#background {
-background-image: url('https://static.pexels.com/photos/26559/pexels-photo-26559.jpg');
-}
-#foreground {
-background-image: url('https://cdn.pixabay.com/photo/2017/03/10/16/01/room-2133173_960_720.png');
-}
-#fore-foreground {
-background-image: url('https://lh5.ggpht.com/En6hYdfOjgUHvRdOsGeNvtrmSbtI_TyrfFJJIYUsE0uGDMA8jQ8W8bKSR_NRNpLRCio=w300');
-}
-#fore-fore-foreground {
-background-image: url('http://www.clker.com/cliparts/W/i/K/w/1/D/glossy-orange-circle-icon-hi.png');
-}
-</style>
-</head>
+
 
 <body>
 <section>
-<div class="jumbotron text-center">
-<div class="container">
-<div id="background" class="mouse-bg"></div>
-<div id="foreground" class="mouse-bg"></div>
-<div id="fore-foreground"  class="mouse-bg"></div>
-<div id="fore-fore-foreground"  class="mouse-bg"></div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/mouse.parallax.js"></script>
-<script>
-$(document).ready(function() {
-				$('#background').mouseParallax({ moveFactor: 5 });
-				$('#foreground').mouseParallax({ moveFactor: 10 });
-				$('#fore-foreground').mouseParallax({ moveFactor: 15 });
-				$('#fore-fore-foreground').mouseParallax({ moveFactor: 20 });
-				
-				$('body').height(3000);
-			});
-</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-	</div>
-	</div>
+	<div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h1>This is where the interactive background will go</h1>
+        <p>IF THE FUCKING THING EVER WORKS</p>
+      </div>
+    </div>
+  </div>
 </section>
-</body>
+<div class="project-list">
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="images/DowntownRender.png" width="600" height="400" alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#">3D Projects</a></h2>
+							<small class="project__category"><a href="#">...</a></small>
+						</div>
+					</div>
+				</div>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
+	<!-- Place this tag right after the last button or just before your close body tag. -->
+	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+	<script>window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+	 
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+	  };
+	 
+	  return t;
+	}(document, "script", "twitter-wjs"));</script>
+	<script src="js/jquery.hover3d.js" ></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".project").hover3d({
+				selector: ".project__card"
+			});
+		});
+
+	</script>
+	
+	</body>
 </html>
