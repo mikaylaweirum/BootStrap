@@ -28,6 +28,11 @@ a {
   text-decoration: none;
   color: #031634; }
 
+.parallax {
+  position: absolute;
+}
+
+
 .site-content {
   width: 990px;
   max-width: 100%;
@@ -188,4 +193,157 @@ pre {
       color: rgba(255, 255, 255, 0.8);
       font-size: 1.3em; }
 
-
+/*Experimental CSS*/
+.paraBack {
+  width: 100%;
+	margin:auto;
+	display:inline-block;
+  padding: 15px; }
+  .paraBack-list:after {
+    content: " ";
+    display: block;
+    clear: both; 
+	
+}
+  .paraBack__image {
+    display: block;
+    position: relative; }
+    .paraBack__image img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block; }
+    .paraBack__image:after {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+      transition: opacity .3s ease;
+      opacity: 0; }
+  .praraBack__card {
+    position: relative;
+    transition: box-shadow .3s ease;
+    box-shadow: 0 10px 30px transparent; }
+    .paraBack__card.hover-in {
+      transition: -webkit-transform .2s ease-out;
+      transition: transform .2s ease-out;
+      transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
+    .paraBack__card.hover-out {
+      transition: -webkit-transform .2s ease-in;
+      transition: transform .2s ease-in;
+      transition: transform .2s ease-in, -webkit-transform .2s ease-in; }
+  .paraBack:hover .paraBack__card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); }
+  .paraBack:hover .paraBack__image:after {
+    opacity: 1; }
+  .paraBack:hover .paraBack__detail {
+    border-width: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); }
+  .paraBack:hover .paraBack__title, .paraBack:hover .paraBack__category {
+    -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1; }
+  .paraBack:hover .paraBack__title {
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1; }
+  .paraBack__detail {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+    border: 0 solid #036564;
+    transition: border .4s ease; }
+  .praraBack__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    font-weight: 100;
+    transition: .4s ease;
+    opacity: 0;
+    -webkit-transform: translateY(40px) scale(0);
+        -ms-transform: translateY(40px) scale(0);
+            transform: translateY(40px) scale(0);
+    will-change: transform; }
+    .paraBack__title a {
+      color: white; }
+  .praraBack__category {
+    opacity: 0;
+    transition: .4s ease;
+    transition-delay: .1s;
+    -webkit-transform: translateY(40px) scale(0);
+        -ms-transform: translateY(40px) scale(0);
+            transform: translateY(40px) scale(0);
+    will-change: transform; }
+    .paraback__category a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.3em; }
+/*Parallax Background*/
+        #wrapper {
+            width: 100%;
+            height: 400px;
+            max-height: 400px;
+            position: relative;
+            margin-top: 150px;
+            background: #2f2f6d;
+            overflow: hidden;
+        }
+        .parallax {
+            position: absolute;
+        }
+        #warpbg {
+            top: -200px;
+            left: -350px;
+        }
+        #star1 {
+            top: 150px;
+            right: 200px;
+        }
+        #star2 {
+            top: 220px;
+            right: 500px;
+        }
+        #star3 {
+            bottom: 20px;
+            right: 20px;
+        }
+        #star4 {
+            top: 40px;
+            left: 290px;
+        }
+        #star5 {
+            bottom: 138px;
+            left: 170px;
+        }
+        #planet {
+            top: -103px;
+            left: -103px;
+        }
+        #robot {
+            top: 200px;
+            right: 250px;
+        }
+        #astronaut {
+            top: 220px;
+            right: 100px;
+        }
+        #asteroid {
+            bottom: 10px;
+            right: 10px;
+        }
