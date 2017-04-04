@@ -1,41 +1,26 @@
-$(document).ready(function () {
-  var lat, lon, api_url;
-  
-  if ("geolocation" in navigator) {
-    
-    $('#showTemp').on('click', function () {
-       navigator.geolocation.getCurrentPosition(gotLocation);
-
-      function gotLocation(position) {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        
-        api_url = 'http://api.openweathermap.org/data/2.5/weather?lat=' +
-                  lat + '&lon=' + 
-                  lon + '&units=metric&appid=b231606340553d9174136f7f083904b3';
-       // http://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=test&appid=b1b15e88fa79722
-        
-        $.ajax({
-          url : api_url,
-          method : 'GET',
-          success : function (data) {
-            
-
-
-            var tempr = data.main.temp;
-            var location = data.name;
-            var desc = data.weather.description;
-            
-
-            $('#result').text(tempr + '°' + location);
-
-          }
-        });
-     }
-    });
-    
-  } else {
-    alert('Your browser doesnt support geolocation. Sorry.');
-  }
-  
+/*$(document).ready(function(){
+	var currentCondition;
+  var city = "boise,id";
+  var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')";
+  //change city variable dynamically as required
+  $.getJSON("https://query.yahooapis.com/v1/public/yql?q=" + searchtext + "&format=json").success(function(data){
+   console.log(data);
+	  currentCondition = data.query.results.channel.item.condition.code;
+   $('#temp').html("Condition in " + city + " is " + currentCondition);
+	 // alert(currentCondition);
+	  if (currentCondition === 27||28||29||30||44){
+		alert("Cloudy" + currentCondition);
+	}else if(currentCondition === 37||38||39||45||47||3||4){
+		alert("Thunderstorms"+currentCondition);
+	}
+	  else if(currentCondition === 5||6||8||9||10||11||12||17||18||35||40){
+		alert("Rain"+currentCondition);
+	}
+	  else if(currentCondition === 7||13||14||15||16||41||42||43||46){
+		alert("Snow"+currentCondition);
+	}else{
+		alert("Sunny"+currentCondition);
+	}
+  });
+	
 });

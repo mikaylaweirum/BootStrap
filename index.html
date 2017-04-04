@@ -12,8 +12,6 @@
 <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <link href="css/mouseparallax.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -124,6 +122,7 @@
 				</div>
 	</div>
 	</section>
+	<script src="js/weather.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
 	<!-- Place this tag right after the last button or just before your close body tag. -->
@@ -185,7 +184,8 @@
             {el: $('#asteroid'), rate: 0.7}
         ]
     });
-</script><script type="text/javascript">
+</script>
+  <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-36251023-1']);
@@ -199,8 +199,34 @@
   })();
 
 </script>
-
-
+<script>
+	$(document).ready(function(){
+	var currentCondition;
+  var city = "boise,id";
+  var searchtext = "select item.condition from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')";
+  $.getJSON("https://query.yahooapis.com/v1/public/yql?q=" + searchtext + "&format=json").success(function(data){
+   console.log(data);
+	  currentCondition = data.query.results.channel.item.condition.code;
+   $('#temp').html("Condition in " + city + " is " + currentCondition);
+	  if (currentCondition === 27||28||29||30||44){
+		//alert("Cloudy" + currentCondition);
+		  //document.getElementById("warpbg").src="images/background_tile.png"
+		  
+	}else if(currentCondition === 37||38||39||45||47||3||4){
+		alert("Thunderstorms"+currentCondition);
+	}
+	  else if(currentCondition === 5||6||8||9||10||11||12||17||18||35||40){
+		alert("Rain"+currentCondition);
+	}
+	  else if(currentCondition === 7||13||14||15||16||41||42||43||46){
+		alert("Snow"+currentCondition);
+	}else{
+		alert("Sunny"+currentCondition);
+	}
+  });
+	
+});
+	</script>
 	</body>
 </html>
 
