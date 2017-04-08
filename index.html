@@ -51,7 +51,7 @@ list-style: none
       <ul class="nav navbar-nav">
         <li class="active"></li>
 </ul>
-      <ul class="nav navbar-nav navbar-right">
+     <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -62,7 +62,7 @@ list-style: none
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-      </ul>
+      </ul>-->
     </div>
 
   </div>
@@ -79,16 +79,16 @@ list-style: none
         <h1>This is a Secret Message</h1>
         <p>if you see it something broke</p>
            <div id="wrapper">
-  				<img id="warpbg" class="parallax left top" src="images/warpbg.png">
-    			<img id="star1" class="parallax top" src="images/star1.png">
-    			<img id="star2" class="parallax top" src="images/star2.png">
-    			<img id="star3" class="parallax" src="images/star3.png">
-    			<img id="star4" class="parallax left top" src="images/star4.png">
-    			<img id="star5" class="parallax left" src="images/star5.png">
-    			<img id="planet" class="parallax left top" src="images/planet.png">
-    			<img id="robot" class="parallax top" src="images/robot.png">
-    			<img id="astronaut" class="parallax top" src="images/astronaut.png">
-    			<img id="asteroid" class="parallax" src="images/asteroid.png">
+  				<img id="defaultBG" class="parallax left top" src="images/SunnyBG.png">
+    			<img id="buildingBG" class="parallax top" src="images/buildings.png">
+    			<img id="building2BG" class="parallax top" src="images/buildings.png">
+    			<img id="tree1BG" class="parallax" src="images/trees.png">
+    			<img id="weather1" class="parallax left top" src="null">
+    			<img id="tree2BG" class="parallax left" src="images/trees.png">
+    			<img id="weather2" class="parallax left top" src="images/sunny.png">
+    			<img id="bushes" class="parallax left top" src="images/interior.png">
+    			<img id="interior" class="parallax top" >
+    			<img id="dustmotes" class="parallax" >
 
 			</div>
 
@@ -115,9 +115,9 @@ list-style: none
 				<!--Studio Projects-->
 				<div class="project">
 					<div class="project__card">
-						<a href="" class="project__image"><img src="images/DowntownRender.png" width="600" height="400" alt=""></a>
+						<a href="" class="project__image"><img src="images/StoryboardStatue.png" width="600" height="400" alt=""></a>
 						<div class="project__detail">
-							<h2 class="project__title"><a href="#">Studio Projects</a></h2>
+							<h2 class="project__title"><a href="#" data-im-show="modal-2">Studio Projects</a></h2>
 							<small class="project__category"><a href="#">...</a></small>
 						</div>
 					</div>
@@ -125,9 +125,9 @@ list-style: none
 				<!--Personal Projects-->
 				<div class="project">
 					<div class="project__card">
-						<a href="" class="project__image"><img src="images/DowntownRender.png" width="600" height="400" alt=""></a>
+						<a href="" class="project__image"><img src="images/ApartmentInterior.png" width="600" height="400" alt=""></a>
 						<div class="project__detail">
-							<h2 class="project__title"><a href="#">Personal Projects</a></h2>
+							<h2 class="project__title"><a href="#" data-im-show="modal-3">Personal Projects</a></h2>
 							<small class="project__category"><a href="#">...</a></small>
 						</div>
 					</div>
@@ -139,23 +139,40 @@ list-style: none
 
 <!--Modal Window for Competitions-->
 <div id="modal-1" class="im-modal">
-  <div class="im-inner-panel">
-   <div class="clearfix" style="max-width:474px;">
-    <ul id="lightSlider" class="gallery">
-		<li data-thumb="images/35X35"> <a href="#"> <img src="images/robot.png" /> </a> </li>
-		<li data-thumb="images/35X35"> <a href="#"> <img src="images/astronaut.png" /> </a> </li>
-		<li data-thumb="images/35X35"> <a href="#"> <img src="images/400x400.gif" /> </a> </li>
-</ul>
+  <div class="container">
+	<div id="my-gallery">
 	</div>
 </div>
-	</div>
+</div>
+
+
+
+<div id="modal-2" class="im-modal">
+
+   <div class="container">
+	<div id="my-gallery2">
+	
+</div>
+
+</div>
+</div>
+<div id="modal-3" class="im-modal">
+  
+   <div class="container">
+	<div id="my-gallery3">
+	
+</div>
+
+</div>
+</div>
 <!--End Modal Window Comepetitions-->
 
 <!--Scripts-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="js/jquery.lightSlider.js"></script>
 	<script src="js/jquery-3.1.1.slim.min.js"></script>
 	<script src="js/icy-modal.min.js"></script>
+	
+
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
 	<script async defer id="github-bjs" src="js/buttons.js"></script>
 
@@ -182,16 +199,16 @@ list-style: none
         invert: true,
         range: 400,
         elms: [
-            {el: $('#warpbg'), rate: 0.1},
-            {el: $('#star1'), rate: 0.2},
-            {el: $('#star2'), rate: 0.2},
-            {el: $('#star3'), rate: 0.2},
-            {el: $('#star4'), rate: 0.2},
-            {el: $('#star5'), rate: 0.2},
-            {el: $('#planet'), rate: 0.3},
-            {el: $('#robot'), rate: 0.4},
-            {el: $('#astronaut'), rate: 0.48},
-            {el: $('#asteroid'), rate: 0.7}
+            {el: $('#defaultBG'), rate: 0.5},
+            {el: $('#buildingBG'), rate: 0.7},
+            {el: $('#tree1BG'), rate: 0.7},
+            {el: $('#weather1'), rate: 0.7},
+            {el: $('#tree2BG'), rate: 0.7},
+            {el: $('#weather2'), rate: 0.7},
+            {el: $('#building2BG'), rate: 0.8},
+            {el: $('#bushes'), rate: 1},
+            {el: $('#dustmotes'), rate: 1},
+            {el: $('#interior'), rate: 1}
         ]
     });
 </script>
@@ -214,48 +231,110 @@ list-style: none
    $('#temp').html("Condition in " + city + " is " + currentCondition);
 	  //Following if statements check weather codes
 	  //And change the background accordingly
-	  if (currentCondition === 27||28||29||30||44){
-		//alert("Cloudy" + currentCondition);
-		  //document.getElementById("warpbg").src="images/background_tile.png"
+	  if (currentCondition == 27||currentCondition ==28||currentCondition ==29||currentCondition ==30||currentCondition ==44||currentCondition ==23){
+		  //cloudy
+		  document.getElementById("defaultBG").src="images/CloudyBG.png"
+		  document.getElementById("weather1").src="null"
+		  document.getElementById("weather2").src="null"
 		  
-	}else if(currentCondition === 37||38||39||45||47||3||4){
-		alert("Thunderstorms"+currentCondition);
+	}else if(currentCondition === 37||currentCondition ==38||currentCondition ==39||currentCondition ==45||currentCondition ==47||currentCondition ==3||currentCondition ==4){
+		//thunderstorms
+		document.getElementById("defaultBG").src="images/CloudyBG.png"
+		document.getElementById("weather1").src="images/lightning.png"
+		  document.getElementById("weather2").src="null"
 	}
-	  else if(currentCondition === 5||6||8||9||10||11||12||17||18||35||40){
-		alert("Rain"+currentCondition);
+	  else if(currentCondition === 5||currentCondition ==6||currentCondition ==8||currentCondition ==9||currentCondition ==10||currentCondition ==11||currentCondition ==12||currentCondition ==17||currentCondition ==18||currentCondition ==5||currentCondition ==40){
+		//rain
+		  document.getElementById("defaultBG").src="images/CloudyBG.png"
+		  document.getElementById("weather1").src="images/rain.png"
+		  document.getElementById("weather2").src="images/rain.png"
 	}
-	  else if(currentCondition === 7||13||14||15||16||41||42||43||46){
-		alert("Snow"+currentCondition);
+	  else if(currentCondition === 7||currentCondition ==13||currentCondition ==14||currentCondition ==15||currentCondition ==16||currentCondition ==41||currentCondition ==42||currentCondition ==43||currentCondition ==46){
+		//snow
+		  document.getElementById("defaultBG").src="images/CloudyBG.png"
+		  document.getElementById("weather1").src="images/snow.png"
+		  document.getElementById("weather2").src="images/snow.png"
 	}else{
-		alert("Sunny"+currentCondition);
+		//sunny
+		
 	}
   });
 	
 });
 </script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$('#lightSlider').lightSlider({
-				gallery:true,
-				minSlide:1,
-				maxSlide:1,
-				auto:true     
-			});  
-	});
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        var slider = $("#light-slider").lightSlider();
-        slider.goToSlide(3);
-        slider.goToPrevSlide();
-        slider.goToNextSlide();
-        slider.getCurrentSlideCount();
-        slider.refresh();
-        slider.play();
-        slider.pause();
-        slider.destroy();
-    });
-</script>
+    <script src="js/gallery.js"></script>
+    <script>
+jQuery(document).ready( function()
+{
+       var myGallery1 = new Gallery;
+       myGallery1.init({
+       /* custom options */
+           id : 'my-gallery',
+           list:[
+                
+                {html:'<img src="images/DowntownRender.png" width="300px">'},
+                {html:'<img src="https://unsplash.it/278/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/278/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/299/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                ]
+
+       });
+       $( "#my-gallery" ).on( "indexChanged", function( event, index ) {
+            console.log(index);
+       });
+});
+    </script>
+<script>
+jQuery(document).ready( function()
+{
+       var myGallery1 = new Gallery;
+       myGallery1.init({
+       /* custom options */
+           id : 'my-gallery2',
+           list:[
+                
+                {html:'<img src="images/BallRamp.gif" width="300px">'},
+                {html:'<img src="images/StatueRoom.png" width="300px">'},
+                {html:'<img src="images/StoryboardStatue.png" width="300px">'},
+                {html:'<img src="https://unsplash.it/278/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/299/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                ]
+
+       });
+       $( "#my-gallery" ).on( "indexChanged", function( event, index ) {
+            console.log(index);
+       });
+});
+    </script>
+    <script>
+jQuery(document).ready( function()
+{
+       var myGallery1 = new Gallery;
+       myGallery1.init({
+       /* custom options */
+           id : 'my-gallery3',
+           list:[
+                
+                {html:'<img src="images/ApartmentInterior.png" width="300px">'},
+                {html:'<img src="https://unsplash.it/278/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/278/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/299/178/?random" width="300px">'},
+                {html:'<img src="https://unsplash.it/300/178/?random" width="300px">'},
+                ]
+
+       });
+       $( "#my-gallery" ).on( "indexChanged", function( event, index ) {
+            console.log(index);
+       });
+});
+    </script>
 </body>
 </html>
 
