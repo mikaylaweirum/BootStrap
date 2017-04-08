@@ -46,23 +46,15 @@ list-style: none
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#">Mikayla W Jones</a></div>
+      <a class="navbar-brand" href="index.html">Mikayla W Jones</a></div>
     <div class="collapse navbar-collapse" id="topFixedNavbar1">
       <ul class="nav navbar-nav">
         <li class="active"></li>
 </ul>
-     <!-- <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">About</a></li>
+        
+      </ul>
     </div>
 
   </div>
@@ -79,13 +71,13 @@ list-style: none
         <h1>This is a Secret Message</h1>
         <p>if you see it something broke</p>
            <div id="wrapper">
-  				<img id="defaultBG" class="parallax left top" src="images/SunnyBG.png">
+  				<img id="defaultBG" class="parallax left top" src="null">
     			<img id="buildingBG" class="parallax top" src="images/buildings.png">
     			<img id="building2BG" class="parallax top" src="images/buildings.png">
     			<img id="tree1BG" class="parallax" src="images/trees.png">
     			<img id="weather1" class="parallax left top" src="null">
     			<img id="tree2BG" class="parallax left" src="images/trees.png">
-    			<img id="weather2" class="parallax left top" src="images/sunny.png">
+    			<img id="weather2" class="parallax left top" src="null">
     			<img id="bushes" class="parallax left top" src="images/interior.png">
     			<img id="interior" class="parallax top" >
     			<img id="dustmotes" class="parallax" >
@@ -231,32 +223,40 @@ list-style: none
    $('#temp').html("Condition in " + city + " is " + currentCondition);
 	  //Following if statements check weather codes
 	  //And change the background accordingly
-	  if (currentCondition == 27||currentCondition ==28||currentCondition ==29||currentCondition ==30||currentCondition ==44||currentCondition ==23){
+	  if (currentCondition == 26||currentCondition == 27||currentCondition ==28||currentCondition ==29||currentCondition ==30||currentCondition ==4||currentCondition ==23){
 		  //cloudy
+		  //alert(currentCondition)
+            
 		  document.getElementById("defaultBG").src="images/CloudyBG.png"
 		  document.getElementById("weather1").src="null"
 		  document.getElementById("weather2").src="null"
 		  
-	}else if(currentCondition === 37||currentCondition ==38||currentCondition ==39||currentCondition ==45||currentCondition ==47||currentCondition ==3||currentCondition ==4){
+	}else if(currentCondition == 37||currentCondition ==38||currentCondition ==39||currentCondition ==45||currentCondition ==47||currentCondition ==3||currentCondition ==4){
 		//thunderstorms
+		//alert(currentCondition)
 		document.getElementById("defaultBG").src="images/CloudyBG.png"
 		document.getElementById("weather1").src="images/lightning.png"
 		  document.getElementById("weather2").src="null"
 	}
-	  else if(currentCondition === 5||currentCondition ==6||currentCondition ==8||currentCondition ==9||currentCondition ==10||currentCondition ==11||currentCondition ==12||currentCondition ==17||currentCondition ==18||currentCondition ==5||currentCondition ==40){
+	  else if(currentCondition == 5||currentCondition ==6||currentCondition ==8||currentCondition ==9||currentCondition ==10||currentCondition ==11||currentCondition ==12||currentCondition ==17||currentCondition ==18||currentCondition ==5||currentCondition ==40){
 		//rain
+		  //alert(currentCondition)
 		  document.getElementById("defaultBG").src="images/CloudyBG.png"
 		  document.getElementById("weather1").src="images/rain.png"
 		  document.getElementById("weather2").src="images/rain.png"
 	}
-	  else if(currentCondition === 7||currentCondition ==13||currentCondition ==14||currentCondition ==15||currentCondition ==16||currentCondition ==41||currentCondition ==42||currentCondition ==43||currentCondition ==46){
+	  else if(currentCondition == 7||currentCondition ==13||currentCondition ==14||currentCondition ==15||currentCondition ==16||currentCondition ==41||currentCondition ==42||currentCondition ==43||currentCondition ==46){
 		//snow
+		  //alert(currentCondition)
 		  document.getElementById("defaultBG").src="images/CloudyBG.png"
 		  document.getElementById("weather1").src="images/snow.png"
 		  document.getElementById("weather2").src="images/snow.png"
 	}else{
 		//sunny
-		
+		alert(currentCondition)
+		document.getElementById("defaultBG").src="images/SunnyBG.png"
+		document.getElementById("weather1").src="images/sunny.png"
+		  document.getElementById("weather2").src="images/sunny.png"
 	}
   });
 	

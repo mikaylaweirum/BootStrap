@@ -49,6 +49,20 @@ section{
 	overflow:hidden;
 	
 }
+.information{
+	background-color: #C0C0C0;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+	border-radius: 25px;
+	width:75%;
+	display:block;
+	margin:auto;
+	margin-top:100px;
+	vertical-align: middle;
+	
+}
 .first{
 	margin:auto;
 	width: 100%;
